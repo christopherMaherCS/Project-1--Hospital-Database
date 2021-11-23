@@ -129,7 +129,7 @@ Primary Key (StaffID, StartDate),
 FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
 );
 
-CREATE TABLE SurgNonSurgSupplies(
+CREATE TABLE PharmaceuticalSupplies(
 DrugID int, 
 DrugName varchar(50), 
 SupplierNumber int, 
@@ -153,7 +153,7 @@ StaffID int,
 WardID int,
 PRIMARY KEY(WardID,DateOrdered),
 FOREIGN KEY (SupplyID) REFERENCES SurgNonSurgSupplies(ItemID),
-FOREIGN KEY (DrugID) REFERENCES SurgNonSurgSupplies(DrugID),
+FOREIGN KEY (DrugID) REFERENCES PharmaceuticalSupplies(DrugID),
 FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
 );
 
