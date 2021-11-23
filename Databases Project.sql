@@ -116,7 +116,7 @@ PatientTime TIME,
 ClinicNumber int,
 PRIMARY KEY (PatientNumber, PatientTime),
 FOREIGN KEY (PatientNumber) REFERENCES Patient(PatientID),
-FOREIGN  KEY(PatientNumber) REFERENCES LocalDoctors(ClinicNumber)
+FOREIGN KEY (PatientNumber) REFERENCES LocalDoctors(ClinicNumber)
 );
 
 CREATE TABLE StaffExperience(
@@ -132,7 +132,7 @@ FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
 CREATE TABLE PharmaceuticalSupplies(
 DrugID int, 
 DrugName varchar(50), 
-SupplierNumber int, 
+SupplierID int, 
 Description varchar(50), 
 Dosage int, 
 MOA varchar(50),
